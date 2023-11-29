@@ -15,8 +15,6 @@ import ChatMessage from "./chatMessage";
 import ChatInput from "./chatInput";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
-// import { logOut } from "./logOut";
-
 function ChatRoom(props) {
     const [values, setvalues] = useState([]);
 
@@ -34,30 +32,6 @@ function ChatRoom(props) {
     if (error) {
         return <h1>{error.message}</h1>;
     }
-    // setvalues(data);
-
-    const message = [];
-    let dummy = [];
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             onSnapshot(q, (snapshot) => {
-    //                 snapshot.docs.forEach((doc) => {
-    //                     message.push({ info: doc.data(), id: doc.id });
-    //                     console.log(values);
-    //                 });
-    //             });
-    //             setvalues(message);
-    //         } catch (error) {
-    //             console.error(error);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
-
-    function handleClick() {}
-
-    console.log(data);
 
     return (
         <div>

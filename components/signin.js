@@ -17,7 +17,6 @@ function Signin() {
                 [event.target.name]: event.target.value,
             };
         });
-        console.log(event.target);
     }
 
     function handleSubmit(event) {
@@ -32,7 +31,7 @@ function Signin() {
                 // Signed up
                 const user = userCredential.user;
                 setValue(user);
-                console.log(user);
+
                 // ...
             })
             .catch((error) => {

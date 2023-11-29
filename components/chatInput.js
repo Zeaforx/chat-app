@@ -14,7 +14,6 @@ function ChatInput(props) {
                 [event.target.name]: event.target.value,
             };
         });
-        console.log(event.target);
     }
 
     async function handleSubmit(event) {
@@ -25,6 +24,7 @@ function ChatInput(props) {
                 text: form.text,
                 createdAt: serverTimestamp(),
                 uid: props.uid,
+                photoURL: props.photoURL,
             });
 
             setForm((texts) => ({
